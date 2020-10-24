@@ -7,11 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week1", "Week1.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2", "..\Week2\Week2.csproj", "{35712F07-81E0-4991-B909-E30E4CAD4AF1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{826E6080-2292-492E-B4CF-712B8243193F}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\Installation Of Git Hub Components In Visual Studio 2019.docx = ..\..\..\..\Desktop\Installation Of Git Hub Components In Visual Studio 2019.docx
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
