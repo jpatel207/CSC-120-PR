@@ -23,7 +23,7 @@ namespace Week1_DecimalNumbers
                 // find length of characterArray, make the first index the highest power and works backwards
                 var digit = int.Parse(item.ToString());
                 var power = Math.Pow(10, maxpower - ++counter);
-                result = (int)(digit * power);
+                result = (int) + (digit * power);
 
                 // now print each character to console
                 Console.WriteLine(item);
