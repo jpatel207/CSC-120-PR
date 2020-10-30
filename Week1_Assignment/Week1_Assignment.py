@@ -23,16 +23,11 @@ def convertToOctal(decimalNumber):
                 octal.append(remainder)
             #octal list has to be reversed because the remainder values are added one after another when octal number is reverse of this
             octal.reverse() 
-            
             #the following is needed to convert the above list of individual digits into a single octal value
-            #converts each integer value into a string
-            strings = [str(integer) for integer in octal] 
-            #each string is then joined together to form one value
-            octalString = ''.join(strings)
-            #converted to integer
-            octalInteger = int(octalString) 
+            strings = [str(integer) for integer in octal] #converts each integer value into a string
+            octalString = ''.join(strings) #each string is then joined together to form one value
+            octalInteger = int(octalString) #converted to integer
             octalList.append(octalInteger)
-        
         else: #any values less than 8 will be the same in octal
             octalList.append(decimal[i])
     print(octalList)
