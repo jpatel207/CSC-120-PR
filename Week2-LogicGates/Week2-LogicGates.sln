@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2-LogicGates", "Week2-LogicGates.csproj", "{F592A440-C2CB-4175-AFB5-F815647BC1CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2-LogicGates", "Week2-LogicGates.csproj", "{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F592A440-C2CB-4175-AFB5-F815647BC1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F592A440-C2CB-4175-AFB5-F815647BC1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F592A440-C2CB-4175-AFB5-F815647BC1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F592A440-C2CB-4175-AFB5-F815647BC1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {751C5AA1-8544-4CF6-A539-2B0E2A83C71C}
+		SolutionGuid = {D229E0A4-C911-411E-A1CD-EE8AA66ECE8E}
 	EndGlobalSection
 EndGlobal

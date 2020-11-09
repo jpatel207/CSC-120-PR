@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}</ProjectGuid>
+    <ProjectGuid>{2832DD64-352A-4973-AA29-A45799139D44}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week2_LogicGates</RootNamespace>
-    <AssemblyName>Week2-LogicGates</AssemblyName>
+    <RootNamespace>PartA</RootNamespace>
+    <AssemblyName>PartA</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Input.cs" />
+    <Compile Include="Identity.cs" />
+    <Compile Include="IdentityInput.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

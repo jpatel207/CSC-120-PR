@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87CF8B7C-5B78-47D7-AFE5-2D3D7B0F3949}</ProjectGuid>
+    <ProjectGuid>{4992051C-06BB-43EB-9205-01E3F77860BB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week2_LogicGates</RootNamespace>
-    <AssemblyName>Week2-LogicGates</AssemblyName>
+    <RootNamespace>BooleanIdentity</RootNamespace>
+    <AssemblyName>BooleanIdentity</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LogicCircuit">
-      <HintPath>..\LogicCircuits\LogicCircuit-master\LogicCircuit-master\LogicCircuit\bin\Debug\LogicCircuit.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Input.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
