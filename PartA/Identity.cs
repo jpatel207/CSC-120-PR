@@ -19,16 +19,22 @@ namespace PartA
         public bool Validate()
         {
             var result = true;
+
             var or = new OR();
             var not = new NOT();
             var and = new AND();
 
             not.SetInputA(SetInputX);
-            var xNOT = not.InputA;
-            result = SetInputA;
+            //var xNOT = not.InputA; 
+            //result = SetInputA;
+            var xNOT = not.Output.State;
             and.SetInputA(SetInputA);
             and.SetInputB(xNOT);
             var outputfromAND = and.Output.State;
+            or.SetInputA(outputfromAND);
+            or.SetInputB(SetInputD);
+            result = or.Output.State;
+
             return result;
         }
     }
