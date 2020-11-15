@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7BE72367-D9D0-493E-BCF5-28060DDAAAEE}</ProjectGuid>
+    <ProjectGuid>{9CF147CC-79B6-460A-9ECD-BEC903553B22}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>PartB</RootNamespace>
     <AssemblyName>PartB</AssemblyName>
@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LogicCircuit">
+      <HintPath>..\..\LogicCircuits\LogicCircuit-master\LogicCircuit-master\LogicCircuit\bin\Debug\LogicCircuit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Identity.cs" />
+    <Compile Include="IdentityInput.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
