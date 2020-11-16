@@ -1,4 +1,5 @@
-﻿using LogicCircuit.Gates.Simple;
+﻿using LogicCircuit.Gates.Composite;
+using LogicCircuit.Gates.Simple;
 using LogicCircuit.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -27,14 +28,19 @@ namespace PartB
         public bool norIdentity()
         {
             var result = true;
-            var orResult = true;
-            var or = new OR();
-            var not = new NOT();
-            or.SetInputA(SetInputX);
-            or.SetInputB(SetInputY);
-            orResult = or.Output.State;
-            not.SetInputA(orResult);
-            result = not.Output.State;
+            //old code that does the same using only simple gates
+            //var orResult = true;
+            //var or = new OR();
+            //var not = new NOT();
+            //or.SetInputA(SetInputX);
+            //or.SetInputB(SetInputY);
+            //orResult = or.Output.State;
+            //not.SetInputA(orResult);
+            //result = not.Output.State;
+            var nor = new NOR();
+            nor.InputA.State = SetInputX;
+            nor.InputB.State = SetInputY;
+            result = nor.Output.State;
             return result;
         }
 
@@ -74,7 +80,6 @@ namespace PartB
         {
             var result = true;
             var or = new OR();
-            var not = new NOT();
             var SetInputX = notXIdentity();
             var SetInputY = notYIdentity();
             or.SetInputA(SetInputX);
@@ -87,14 +92,19 @@ namespace PartB
         public bool nandIdentity()
         {
             var result = true;
-            var andResult = true;
-            var and = new AND();
-            var not = new NOT();
-            and.SetInputA(SetInputX);
-            and.SetInputB(SetInputY);
-            andResult = and.Output.State;
-            not.SetInputA(andResult);
-            result = not.Output.State;
+            //old code that does the same using only simple gates
+            //var andResult = true;
+            //var and = new AND();
+            //var not = new NOT();
+            //and.SetInputA(SetInputX);
+            //and.SetInputB(SetInputY);
+            //andResult = and.Output.State;
+            //not.SetInputA(andResult);
+            //result = not.Output.State;
+            var nand = new NAND();
+            nand.InputA.State = SetInputX;
+            nand.InputB.State = SetInputY;
+            result = nand.Output.State;
             return result;
         }
 
