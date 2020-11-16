@@ -107,9 +107,9 @@ namespace Week2_LogicGates
                 var xorGate = new XOR();
                 xorGate.InputA.State = i.InputA;
                 xorGate.InputB.State = i.InputB;
-                var norResult = xorGate.Output.State;
+                var xorResult = xorGate.Output.State;
                 var inputString = i.InputA.ToString() + "|" + i.InputB.ToString();
-                Console.WriteLine("XOR Gate with inputs {0}: {1}", inputString, xorGate.ToString());
+                Console.WriteLine("XOR Gate with inputs {0}: {1}", inputString, xorResult.ToString());
             }
 
             //XNOR Gate
@@ -118,9 +118,9 @@ namespace Week2_LogicGates
                 var xnorGate = new XNOR();
                 xnorGate.InputA.State = i.InputA;
                 xnorGate.InputB.State = i.InputB;
-                var norResult = xnorGate.Output.State;
+                var xnorResult = xnorGate.Output.State;
                 var inputString = i.InputA.ToString() + "|" + i.InputB.ToString();
-                Console.WriteLine("XNOR Gate with inputs {0}: {1}", inputString, xnorGate.ToString());
+                Console.WriteLine("XNOR Gate with inputs {0}: {1}", inputString, xnorResult.ToString());
             }
 
         }
