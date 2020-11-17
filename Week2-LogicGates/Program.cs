@@ -105,6 +105,7 @@ namespace Week2_LogicGates
             foreach (var i in truthTable)
             {
                 var xorGate = new XOR();
+                //following two lines print out inputs/outputs for or different gates involved with XOR, not sure how to stop this, but final output is right
                 xorGate.InputA.State = i.InputA;
                 xorGate.InputB.State = i.InputB;
                 var xorResult = xorGate.Output.State;
@@ -116,6 +117,7 @@ namespace Week2_LogicGates
             foreach (var i in truthTable)
             {
                 var xnorGate = new XNOR();
+                //following two lines print out inputs/outputs for or different gates involved with XNOR, not sure how to stop this, but final output is right
                 xnorGate.InputA.State = i.InputA;
                 xnorGate.InputB.State = i.InputB;
                 var xnorResult = xnorGate.Output.State;
