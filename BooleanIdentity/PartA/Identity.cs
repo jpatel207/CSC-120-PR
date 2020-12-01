@@ -25,8 +25,6 @@ namespace PartA
             var and = new AND();
 
             not.SetInputA(SetInputX);
-            //var xNOT = not.InputA; 
-            //result = SetInputA;
             var xNOT = not.Output.State;
             and.SetInputA(SetInputA);
             and.SetInputB(xNOT);
