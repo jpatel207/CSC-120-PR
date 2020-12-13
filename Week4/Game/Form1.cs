@@ -24,13 +24,22 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //had already used drag and drop method of creating buttons before tutorial, so I kept that instead of loading buttons using code here
+            //had already used drag and drop method of creating buttons before help session tutorial, so I kept that instead of loading buttons using code here
             //this section contains the properties for components that need to be adjusted when form is loaded initially
 
+            //gives a random integer to the box that the user will compare the boolean expression with 
             int num = random.Next(0, 9);
             this.ColorBox.Text = num.ToString();
+            //gives a random color for the background of the comparison box
+            Random rand = new Random();
+            Color[] c = { Color.Blue, Color.Red, Color.Green, Color.Yellow};
+            this.ColorBox.BackColor = c[rand.Next(0, c.Length)];
+            this.ColorBox.ForeColor = Color.White;
 
-
+            //box that shows boolean expression to compare with ColorBox
+            //
+            booleanExpressionString = 
+            this.BooleanExpression.Text = "button1";
 
 
         }

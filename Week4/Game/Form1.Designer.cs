@@ -140,7 +140,6 @@
             this.BooleanExpression.Name = "BooleanExpression";
             this.BooleanExpression.Size = new System.Drawing.Size(138, 51);
             this.BooleanExpression.TabIndex = 1;
-            this.BooleanExpression.Text = "button1";
             this.BooleanExpression.UseVisualStyleBackColor = true;
             // 
             // Form1
