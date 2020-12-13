@@ -29,15 +29,17 @@ namespace Game
             InitializeComponent();
 
             //box with color and number
-            num = random.Next(0, 9);
-            this.ColorBox.Text = num.ToString();
-            Color[] c = { Color.Blue, Color.Red, Color.Green, Color.Gray };
-            Color boxColor = c[rand.Next(0, c.Length)];
-            colorBoxColorName = boxColor.Name;
-            this.ColorBox.BackColor = boxColor;
-            this.ColorBox.ForeColor = Color.White;
+            CreateColorBox();
 
             //box that shows boolean expression to compare with ColorBox
+            CreateBooleanExpression();
+
+            this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
+
+        }
+
+        private void CreateBooleanExpression()
+        {
             string[] color = { "Blue", "Red", "Green", "Gray" };
             num2 = random.Next(0, 9);
             string[] randomOperator = { "&&", "||" };
@@ -45,9 +47,17 @@ namespace Game
             expressionOperator = randomOperator[rand.Next(0, randomOperator.Length)];
             string booleanExpressionString = expressionColor + " " + expressionOperator + " " + num2.ToString();
             this.BooleanExpression.Text = booleanExpressionString;
+        }
 
-            this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
-
+        private void CreateColorBox()
+        {
+            num = random.Next(0, 9);
+            this.ColorBox.Text = num.ToString();
+            Color[] c = { Color.Blue, Color.Red, Color.Green, Color.Gray };
+            Color boxColor = c[rand.Next(0, c.Length)];
+            colorBoxColorName = boxColor.Name;
+            this.ColorBox.BackColor = boxColor;
+            this.ColorBox.ForeColor = Color.White;
         }
 
         private void TrueButton_Click(object sender, EventArgs e)
@@ -67,9 +77,12 @@ namespace Game
                 {
                     scoreCount += 1;
                     this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
+                    trueCount = 0; //need to reset count after correct response
                     //add function or code to start next round
+                    CreateColorBox();
+                    CreateBooleanExpression();
                 }
-                else
+                else if (trueCount == 0)
                 {
                     MessageBox.Show("Game Over. Please restart.");
                     scoreCount = 0;
@@ -82,7 +95,11 @@ namespace Game
                 {
                     scoreCount += 1;
                     this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
+                    trueCount = 0; //need to reset count after correct response
                     //add function or code to start next round
+                    CreateColorBox();
+                    CreateBooleanExpression();
+
                 }
                 else
                 {
@@ -116,7 +133,10 @@ namespace Game
                 {
                     scoreCount += 1;
                     this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
-                    //add function or code to start next round
+                    falseCount = 0; //need to reset count after each correct response
+                    //add methods to start next round
+                    CreateColorBox();
+                    CreateBooleanExpression();
                 }
             }
             if (expressionOperator == "&&")
@@ -131,7 +151,10 @@ namespace Game
                 {
                     scoreCount += 1;
                     this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
-                    //add function or code to start next round
+                    falseCount = 0; //need to reset count after each correct response
+                    //add methods code to start next round
+                    CreateColorBox();
+                    CreateBooleanExpression();
                 }
             }
         }
