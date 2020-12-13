@@ -61,9 +61,8 @@
             this.ScoreLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.ScoreLabel.Location = new System.Drawing.Point(286, 71);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(123, 37);
+            this.ScoreLabel.Size = new System.Drawing.Size(2, 37);
             this.ScoreLabel.TabIndex = 3;
-            //this.ScoreLabel.Text = "Score = 0";
             // 
             // instructions
             // 
