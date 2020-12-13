@@ -50,35 +50,9 @@ namespace Game
 
         }
 
-        public void Form1_Load(object sender, EventArgs e)
-        {
-            //used drag and drop method of creating buttons before help session tutorial, so I kept that instead of loading buttons using code here
-            //this section contains the properties for components that need to be adjusted when form is loaded initially
-
-            //box "button" that shows number and color
-            //int num = random.Next(0, 9);
-            //this.ColorBox.Text = num.ToString();
-            //Random rand = new Random();
-            //Color[] c = { Color.Blue, Color.Red, Color.Green, Color.Gray };
-            //Color boxColor = c[rand.Next(0, c.Length)];
-            //this.ColorBox.BackColor = boxColor;
-            //this.ColorBox.ForeColor = Color.White;
-
-            //box that shows boolean expression to compare with ColorBox
-            //string[] color = { "blue", "red", "green", "gray" };
-            //int num2 = random.next(0, 9);
-            //string[] randomoperator = { "&&", "||" };
-            //string expressioncolor = color[rand.next(0, color.length)];
-            //expressionoperator = randomoperator[rand.next(0, randomoperator.length)];
-            //string booleanexpressionstring = expressioncolor + " " + expressionoperator + " " + num2.tostring();
-            //this.booleanexpression.text = booleanexpressionstring;
-
-        }
-
         private void TrueButton_Click(object sender, EventArgs e)
         {
             int trueCount = 0;
-            MessageBox.Show(expressionOperator);
             if (num == num2)
             {
                 trueCount += 1;
@@ -92,12 +66,14 @@ namespace Game
                 if (trueCount >= 1)
                 {
                     scoreCount += 1;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
                     //add function or code to start next round
                 }
                 else
                 {
                     MessageBox.Show("Game Over. Please restart.");
                     scoreCount = 0;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
                 }
             }
             if (expressionOperator == "&&")
@@ -105,12 +81,14 @@ namespace Game
                 if (trueCount == 2)
                 {
                     scoreCount += 1;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
                     //add function or code to start next round
                 }
                 else
                 {
                     MessageBox.Show("Game Over. Please restart.");
                     scoreCount = 0;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
                 }
             }
         }
@@ -118,7 +96,6 @@ namespace Game
         private void FalseButton_Click(object sender, EventArgs e)
         {
             int falseCount = 0;
-            MessageBox.Show(expressionOperator);
             if (num == num2)
             {
                 falseCount += 1;
@@ -131,26 +108,30 @@ namespace Game
             {
                 if (falseCount >= 1)
                 {
-                    scoreCount += 1;
-                    //add function or code to start next round
+                    MessageBox.Show("Game Over. Please restart.");
+                    scoreCount = 0;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
                 }
                 else
                 {
-                    MessageBox.Show("Game Over. Please restart.");
-                    scoreCount = 0;
+                    scoreCount += 1;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
+                    //add function or code to start next round
                 }
             }
             if (expressionOperator == "&&")
             {
                 if (falseCount == 2)
                 {
-                    scoreCount += 1;
-                    //add function or code to start next round
+                    MessageBox.Show("Game Over. Please restart.");
+                    scoreCount = 0;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
                 }
                 else
                 {
-                    MessageBox.Show("Game Over. Please restart.");
-                    scoreCount = 0;
+                    scoreCount += 1;
+                    this.ScoreLabel.Text = "Score = " + scoreCount.ToString();
+                    //add function or code to start next round
                 }
             }
         }
