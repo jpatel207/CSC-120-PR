@@ -63,7 +63,7 @@
             this.ScoreLabel.Name = "ScoreLabel";
             this.ScoreLabel.Size = new System.Drawing.Size(123, 37);
             this.ScoreLabel.TabIndex = 3;
-            this.ScoreLabel.Text = "Score = 0";
+            //this.ScoreLabel.Text = "Score = 0";
             // 
             // instructions
             // 
@@ -82,6 +82,7 @@
             this.TrueButton.TabIndex = 7;
             this.TrueButton.Text = "True";
             this.TrueButton.UseVisualStyleBackColor = true;
+            this.TrueButton.Click += new System.EventHandler(this.TrueButton_Click);
             // 
             // FalseButton
             // 
@@ -91,6 +92,7 @@
             this.FalseButton.TabIndex = 8;
             this.FalseButton.Text = "False";
             this.FalseButton.UseVisualStyleBackColor = true;
+            this.FalseButton.Click += new System.EventHandler(this.FalseButton_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -111,6 +113,7 @@
             this.RestartButton.TabIndex = 9;
             this.RestartButton.Text = "Restart";
             this.RestartButton.UseVisualStyleBackColor = false;
+            this.RestartButton.Click += new System.EventHandler(this.RestartButton_Click);
             // 
             // tableLayoutPanel1
             // 
