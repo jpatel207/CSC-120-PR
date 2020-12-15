@@ -9,7 +9,7 @@ namespace Memory
 {
     public class Storage
     {
-        static string STORAGE = "MyStore.txt";
+        static string STORAGE = "MyStore.txt"; //found this in bin folder with value of 336 - got wiped after running program for some reason
         public static bool SaveData(int val)
         {
             var fs = new FileStream(STORAGE, FileMode.Create);
@@ -30,7 +30,7 @@ namespace Memory
                 return 0;
             }
             var data = File.ReadAllText(STORAGE);
-            var inValue = int.Parse(data);
+            var inValue = int.Parse(data); //converts to 32 bit integer
             return inValue;
         }
 
@@ -74,23 +74,26 @@ namespace Memory
             return inputRow;
         }
 
-        public static List<TruthTable> ReadTruthTableData(string dataPath)
+        public static List<TruthTable> ReadTruthTableData(string dataPath) //inputPutDataFile is assigned here for dataPath
         {
-            var inputList = new List<TruthTable>();
-            var fs = new FileStream(dataPath, FileMode.Create);
-            var sr = new StreamReader(fs);
-            while (sr.Peek() != 1) // peek and read till End of File
+            var inputList = new List<TruthTable>(); //creates new list called inputList that will later hold the boolean values
+            var fs = new FileStream(dataPath, FileMode.Open); //opens text file
+            var sr = new StreamReader(fs); //reads through previously created FileStream
+            sr.ReadLine(); //skips first line
+            while (sr.Peek() != -1) // peek and read till End of File - had to be corrected from != -1 (cause of null exception error)
             {
-                var inputRow = new TruthTable();
+                var inputRow = new TruthTable(); //TruthTable() -> get; set; implementation
 
                 var data = sr.ReadLine();
-                var dataElements = data.Split(','); // 0,1,0,1  will be split into arrays
+                //Console.WriteLine(data); //to test if while loop is working
+                var dataElements = data.Split(','); // column will be split into array elements
+                //Console.Write(dataElements[0]);
 
-                inputRow.A = Utility.ConvertToBoolean(dataElements[0]);
-                inputRow.X = Utility.ConvertToBoolean(dataElements[1]);
-                inputRow.D = Utility.ConvertToBoolean(dataElements[2]);
+                inputRow.A = Utility.ConvertToBoolean(dataElements[0]); //from Utility class - ConvertToBoolean - checks if dataElement is 1 or 0 converts to boolean
+                inputRow.D = Utility.ConvertToBoolean(dataElements[1]);
+                inputRow.X = Utility.ConvertToBoolean(dataElements[2]);
                 inputRow.R = Utility.ConvertToBoolean(dataElements[3]);
-                inputList.Add(inputRow);
+                inputList.Add(inputRow); //adds all of the converted rows to the previously created and empty inputList
             }
 
             sr.Close();

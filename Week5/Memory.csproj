@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LogicCircuit">
+      <HintPath>..\..\..\source\repos\CSC-120-PR\LogicCircuits\LogicCircuit-master\LogicCircuit-master\LogicCircuit\bin\Debug\LogicCircuit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

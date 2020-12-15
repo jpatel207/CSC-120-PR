@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week5", "Week5.csproj", "{6E004D2E-0ADA-4805-98EE-5967F0E44F9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory", "Memory.csproj", "{1800F7F6-9B7C-451E-81FC-CD297471447F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E004D2E-0ADA-4805-98EE-5967F0E44F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E004D2E-0ADA-4805-98EE-5967F0E44F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E004D2E-0ADA-4805-98EE-5967F0E44F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E004D2E-0ADA-4805-98EE-5967F0E44F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1800F7F6-9B7C-451E-81FC-CD297471447F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1800F7F6-9B7C-451E-81FC-CD297471447F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1800F7F6-9B7C-451E-81FC-CD297471447F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1800F7F6-9B7C-451E-81FC-CD297471447F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3E0CE031-465F-43B2-B001-01567B492455}
+		SolutionGuid = {86C3FB9C-1229-4DD1-A1EC-4E302C6A4FBD}
 	EndGlobalSection
 EndGlobal
