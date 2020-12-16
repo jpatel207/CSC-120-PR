@@ -34,6 +34,7 @@ namespace Memory
                                   $" Table Output = {identity.SetInputR}, " +
                                   $" Matching Outputs = {compareOutput} ");
                 rowCount++;
+                //the above code prints too quickly to stop it using ctrl+c, not sure if I'm misunderstanding that portion of the assingment
             }
         }
 
