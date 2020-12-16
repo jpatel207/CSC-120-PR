@@ -14,25 +14,6 @@ namespace Memory
         public Boolean D { get; set; }
         public Boolean R { get; set; }
 
-        public bool Validate()
-        {
-            var result = true;
-
-            var or = new OR();
-            var not = new NOT();
-            var and = new AND();
-
-            not.SetInputA(X);
-            var xNOT = not.Output.State;
-            and.SetInputA(A);
-            and.SetInputB(xNOT);
-            var outputfromAND = and.Output.State;
-            or.SetInputA(outputfromAND);
-            or.SetInputB(D);
-            result = or.Output.State;
-
-            return result;
-        }
     }
 
 }

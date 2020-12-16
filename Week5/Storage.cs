@@ -9,12 +9,12 @@ namespace Memory
 {
     public class Storage
     {
-        static string STORAGE = "MyStore.txt"; //found this in bin folder with value of 336 - got wiped after running program for some reason
+        static string STORAGE = "MyStore.txt"; //contains int value from text
         public static bool SaveData(int val)
         {
             var fs = new FileStream(STORAGE, FileMode.Create);
             var sw = new StreamWriter(fs);
-            sw.Write( val);
+            sw.Write( val); //incrementing value from for loop updates text file
             sw.Flush();
             sw.Close();
             fs.Close();
@@ -30,7 +30,7 @@ namespace Memory
                 return 0;
             }
             var data = File.ReadAllText(STORAGE);
-            var inValue = int.Parse(data); //converts to 32 bit integer
+            var inValue = int.Parse(data); //converts string value in mystore.txt to integer  
             return inValue;
         }
 
@@ -87,7 +87,6 @@ namespace Memory
                 var data = sr.ReadLine();
                 //Console.WriteLine(data); //to test if while loop is working
                 var dataElements = data.Split(','); // column will be split into array elements
-                //Console.Write(dataElements[0]);
 
                 inputRow.A = Utility.ConvertToBoolean(dataElements[0]); //from Utility class - ConvertToBoolean - checks if dataElement is 1 or 0 converts to boolean
                 inputRow.D = Utility.ConvertToBoolean(dataElements[1]);

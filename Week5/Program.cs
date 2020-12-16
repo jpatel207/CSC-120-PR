@@ -14,26 +14,27 @@ namespace Memory
             //Conversion();
             var inputPutDataFile = @"C:\Data\inputdata.txt"; //creates string of the inputdata location to be used for ReadTruthTableData method -> FileStream
             var truthTableInputs = Storage.ReadTruthTableData(inputPutDataFile); //list of converted boolean values made using ReadTruthTableData method in Storage class
-
-            foreach( var input in truthTableInputs) //reads the data from the file and use it as the input for logic circuits
+            var rowCount = 0;
+            var storedValue = Storage.ReadData();
+            if(storedValue >= 8)
+            {
+                storedValue = 0; //resets back to beginning of table
+            }
+            foreach (var input in truthTableInputs) //reads the data from the file and use it as the input for logic circuits
             {
                 //Console.WriteLine($"{input.A}, {input.X}, {input.D}, {input.R}"); //prints each row/column of converted boolean values
 
-                //serves as memory, last row value saved to file to make sure program picks up where it left off
-                //ideas: you can use the mystore.txt file as a sort of updating counter file - you won't print anything from it
-                
-
-                //input for logic circuits
-                var identity = new TruthTable() { A = input.A, D = input.D, X = input.X, R = input.R };
+                var identity = new Identity() { SetInputA = input.A, SetInputD = input.D, SetInputX = input.X, SetInputR = input.R };
                 var output = identity.Validate();
-                Console.WriteLine($" A  = {identity.A }," +
-                                  $" D = {identity.D}," +
-                                  $" X = {identity.X}, " +
+                var compareOutput = output == identity.SetInputR; //outputs true if the output generated using logic circuits matches the output value from the table
+                Console.WriteLine($" A  = {identity.SetInputA }," +
+                                  $" D = {identity.SetInputD}," +
+                                  $" X = {identity.SetInputX}, " +
                                   $" Gate Output = {output}, " +
-                                  $" Table Output = {identity.R}");
+                                  $" Table Output = {identity.SetInputR}, " +
+                                  $" Matching Outputs = {compareOutput} ");
+                rowCount++;
             }
-
-
         }
 
 
@@ -54,7 +55,7 @@ namespace Memory
         private static void SimulateMemory()
         {
             var a = 100;
-            var storedValue = Storage.ReadData(); //ReadData() takes in that mystore.txt file integer and converts value to 32 bit integer
+            var storedValue = Storage.ReadData(); //integer converted from text file string
             if (storedValue > 0)
             {
                 a = storedValue;
