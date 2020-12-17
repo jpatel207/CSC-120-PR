@@ -14,16 +14,20 @@ namespace Memory
             //Conversion();
             var inputPutDataFile = @"C:\Data\inputdata.txt"; //creates string of the inputdata location to be used for ReadTruthTableData method -> FileStream
             var truthTableInputs = Storage.ReadTruthTableData(inputPutDataFile); //list of converted boolean values made using ReadTruthTableData method in Storage class
-            var rowCount = 0;
-            var storedValue = Storage.ReadData();
-            if(storedValue >= 8)
+            var storedValue = Storage.ReadData(); //reads count value from mystore.txt
+            var a = 0; //int value that serves as placeholder in for loop
+            if (storedValue >= 7)
             {
-                storedValue = 0; //resets back to beginning of table
+                a = 0; //resets back to beginning of table
             }
-            foreach (var input in truthTableInputs) //reads the data from the file and use it as the input for logic circuits
+            else if (storedValue < 7 && storedValue > 0)
             {
-                //Console.WriteLine($"{input.A}, {input.X}, {input.D}, {input.R}"); //prints each row/column of converted boolean values
+                a = storedValue; //maintains count so for loop starts at point where program is shut down if the value is less than table count
+            }
 
+            for (int i = a; i < truthTableInputs.Count; i++) //reads the data from the file and use it as the input for logic circuits
+            {
+                TruthTable input = truthTableInputs[i];
                 var identity = new Identity() { SetInputA = input.A, SetInputD = input.D, SetInputX = input.X, SetInputR = input.R };
                 var output = identity.Validate();
                 var compareOutput = output == identity.SetInputR; //outputs true if the output generated using logic circuits matches the output value from the table
@@ -33,14 +37,14 @@ namespace Memory
                                   $" Gate Output = {output}, " +
                                   $" Table Output = {identity.SetInputR}, " +
                                   $" Matching Outputs = {compareOutput} ");
-                rowCount++;
-                //the above code prints too quickly to stop it using ctrl+c, not sure if I'm misunderstanding that portion of the assingment
+                Storage.SaveData(i); //saves mystore.txt updated with last value that increments by one each time (memory like)
+                Console.WriteLine($"Print Current Stored Value {i}");
             }
         }
 
 
 
-        private static void Conversion()
+            private static void Conversion()
         {
             var value = "1";
             var convertedValue = Utility.ConvertToBoolean(value);
