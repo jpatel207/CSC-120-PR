@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Memory
@@ -27,6 +28,7 @@ namespace Memory
 
             for (int i = a; i < truthTableInputs.Count; i++) //reads the data from the file and use it as the input for logic circuits
             {
+                Thread.Sleep(2000);
                 TruthTable input = truthTableInputs[i];
                 var identity = new Identity() { SetInputA = input.A, SetInputD = input.D, SetInputX = input.X, SetInputR = input.R };
                 var output = identity.Validate();
