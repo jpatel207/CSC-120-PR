@@ -1,0 +1,12 @@
+SR Latch with NAND gates
+ S  = False, R = False | Q Output = True, Q_not Output = True | Expected Output Match = True | Valid = False 
+ S  = False, R = True | Q Output = True, Q_not Output = False | Expected Output Match = True | Valid = True 
+ S  = True, R = False | Q Output = False, Q_not Output = True | Expected Output Match = True | Valid = True 
+ S  = True, R = True | Q Output = False, Q_not Output = True | Expected Output Match = True | Valid = True 
+ S  = True, R = True | Q Output = True, Q_not Output = False | Expected Output Match = True | Valid = True 
+SR Latch with NOR gates
+ S  = False, R = False | Q Output = True, Q_not Output = False | Expected Output Match = True | Valid = True 
+ S  = False, R = True | Q Output = False, Q_not Output = True | Expected Output Match = True | Valid = True 
+ S  = False, R = True | Q Output = False, Q_not Output = True | Expected Output Match = True | Valid = True 
+ S  = True, R = False | Q Output = True, Q_not Output = False | Expected Output Match = True | Valid = True 
+ S  = True, R = True | Q Output = False, Q_not Output = False | Expected Output Match = True | Valid = False 
